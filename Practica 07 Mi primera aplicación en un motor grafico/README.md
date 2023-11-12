@@ -1,3 +1,4 @@
-![2023-10-14 10-03-13](https://github.com/CesarRam30020/SimulacionPorComputadora-CesarRamirez/assets/116384269/38fc0835-5cf0-4888-96ee-d5d7c148ac46)
+![The Curze Tales](https://github.com/CesarRam30020/SimulacionPorComputadora-CesarRamirez/assets/116384269/1f4447fb-a99b-49e8-9189-c083e3545635)
 
-![Humo y Fuego](https://github.com/CesarRam30020/SimulacionPorComputadora-CesarRamirez/assets/116384269/cdd57bb3-c7f6-4ef4-9f99-b03ab3b7a127)
+![The Curze Tales2](https://github.com/CesarRam30020/SimulacionPorComputadora-CesarRamirez/assets/116384269/282de826-336d-4a49-b720-369167cc9b1a)
+
