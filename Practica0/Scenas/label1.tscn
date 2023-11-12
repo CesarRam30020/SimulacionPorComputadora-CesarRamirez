@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cirryt214ekdm"]
+
+[ext_resource type="Texture2D" uid="uid://c28wwpfyrqkq8" path="res://icon.svg" id="1_mhoxw"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="2_b7nj3"]
+
+[node name="Label" type="Label"]
+offset_right = 95.0
+offset_bottom = 26.0
+text = "Hola Mundo"
+vertical_alignment = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(187, 191)
+texture = ExtResource("1_mhoxw")
+script = ExtResource("2_b7nj3")
