@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfmh3fm2de78o"]
+
+[ext_resource type="Script" path="res://Scripts/PowerCoin.gd" id="1_mfm5m"]
+[ext_resource type="Texture2D" uid="uid://cxmfchspycdx6" path="res://Assets/Textures/fire-skull-no-fire.png" id="2_b6bnj"]
+[ext_resource type="Texture2D" uid="uid://drwctcxl31i41" path="res://Assets/Textures/fuieguito.png" id="3_u7407"]
+[ext_resource type="AudioStream" uid="uid://jeuxr0ogbtov" path="res://Assets/Sound/FX/27_sword_miss_2.wav" id="4_pddsk"]
+
+[sub_resource type="Curve" id="Curve_yh7uo"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.494709, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_kkhmu"]
+offsets = PackedFloat32Array(0.625, 1)
+colors = PackedColorArray(0.914063, 0.734375, 0, 1, 1, 1, 1, 0)
+
+[node name="Coin" type="Area2D"]
+script = ExtResource("1_mfm5m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_b6bnj")
+region_enabled = true
+region_rect = Rect2(111, 6, 50, 64)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-16, -25, 9, -25, 19, -15, 18, -2, 9, 25, -11, 24, -16, 8, -21, -8)
+
+[node name="CoinSparkles" type="CPUParticles2D" parent="."]
+amount = 4
+texture = ExtResource("3_u7407")
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 40.0
+damping_min = 0.5
+damping_max = 0.5
+scale_amount_min = 0.01
+scale_amount_max = 0.09
+scale_amount_curve = SubResource("Curve_yh7uo")
+color_ramp = SubResource("Gradient_kkhmu")
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_pddsk")
+volume_db = 2.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
